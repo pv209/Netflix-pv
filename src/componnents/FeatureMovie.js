@@ -7,8 +7,14 @@ export default ({item}) => {
 
     let firstDate = new Date(item.first_air_date);
     let genres = [];
+
     for(let i in item.genres){
         genres.push(item.genres[i].name);
+    }
+
+    let description = item.overview;
+    if(description.length > 200) {
+        description = description.substring(0,200)+'...';
     }
     return (
         <section className="feature" style={{
@@ -24,7 +30,7 @@ export default ({item}) => {
                         <div className="feature--year">{firstDate.getFullYear()}</div>
                         <div className="feature--seasons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
                     </div>
-                    <div className="feature--description">{item.overview}</div>
+                    <div className="feature--description">{description}</div>
                     <div className="feature--buttons">
                         <a href="" className='watchButton'>► Assistir</a>
                         <a href="" className='myListButton'>+ Minha Lista</a>
