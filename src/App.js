@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import './App.css'
-import Api from './Api.js';
+import Api from './api.js';
 import MovieRow from './componnents/MovieRow.js';
-import FeatureMovie from'./componnents/FeatureMovie';
+import FeatureMovie from'./componnents/featureMovie';
 import Header from './componnents/Header';
 
 export default () => {
