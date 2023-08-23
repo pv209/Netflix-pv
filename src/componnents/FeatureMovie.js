@@ -19,8 +19,8 @@ export default ({item}) => {
         <section className="feature" style={{
             backgroundSize:'cover',
             backgroundPosition:'center',
-            backgroundImage: `url(https:image.tmdb.org/t/p/original${item.backdrop_path})`
         }}>
+            <img className='banner' src={`https:image.tmdb.org/t/p/original${item.backdrop_path}`} alt="" />
             <div className="feature--vertical">
                 <div className="feature--horizontal">
                     <div className="feature--name">{item.original_name}</div>
