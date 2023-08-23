@@ -1,6 +1,5 @@
 import React from 'react';
 import './featureMovie.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export default ({item}) => {
