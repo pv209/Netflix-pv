@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './movieRow.css';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default({title, items}) => {
     const [scrollX, setScrollX] = useState(0);  
@@ -30,10 +31,10 @@ export default({title, items}) => {
         <div className='movieRow'>
             <h2>{title}</h2>
             <div className="movieRow--left" onClick={handleLeftArrow}>
-                <NavigateBeforeIcon style={{fontSize:50}} />
+            <FontAwesomeIcon  icon={faArrowLeft}></FontAwesomeIcon>
              </div>
              <div className="movieRow--right" onClick={handleRightArrow}>
-                <NavigateNextIcon style={{fontSize:50}} />
+                <FontAwesomeIcon  icon={faArrowRight}></FontAwesomeIcon>
              </div>
             <div className="movieRow--listarea">
                 <div className="movieRow--list" style={{
