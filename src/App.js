@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useLayoutEffect} from 'react'
 import './App.css'
 import Api from './api.js';
 import MovieRow from './componnents/MovieRow.js';
@@ -10,7 +10,7 @@ export default () => {
   const [movieList, setMovieList] = useState ([]);
   const [featureData, setFeatureData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
-    useEffect(() => {
+  useLayoutEffect(() => {
       const loadAll  = async () => {
         let list =  await Api.getHomeList();
         setMovieList(list);
